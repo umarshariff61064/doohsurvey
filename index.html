@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Form To Google Sheets Demo</title>
+  <title>Doohma - Survey</title>
   <meta name="description" content="Store HTML form submissions in Google Sheets">
   <link href="./favicon.png" rel="shortcut icon">
 
@@ -23,7 +23,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">Visual Ad Survey</a>
+      <a class="navbar-brand" href="index.html">Doohma</a>
     </div>
   </div>
 </nav>
@@ -37,41 +37,80 @@
     <form name="submit-to-google-sheet">
 	
 	
-	
+		
 		<div class="col-md-2">		
-		<p class="text-primary">1.Have you ever thought of promoting your business or services visually at different venues like coffee shops, pubs, restaurants, retail stores etc?</p>
+		<p class="text-primary">1.Do you do any form of advertisement?</p>
+		<div class="form-check">
+		  <input class="form-check-input" type="radio" name="advertisement" id="exampleRadios1" value="Yes">
+		  <label class="form-check-label" for="exampleRadios1">
+			yes
+		  </label>
+		</div>
+		<div class="form-check">
+		  <input class="form-check-input" type="radio" name="advertisement" id="exampleRadios2" value="No">
+		  <label class="form-check-label" for="exampleRadios2">
+			no
+		  </label>
+		</div>
+		</div>		
+		
+		<div class="col-md-2">		
+		<p class="text-primary">2.If yes, how much do you spend per month?</p>
+		<div class="form-check">
+		  <input class="form-check-input" type="radio" name="adspend" id="exampleRadios1" value="less than £20/month">
+		  <label class="form-check-label" for="exampleRadios1">
+			less than £20
+		  </label>
+		</div>
+		<div class="form-check">
+		  <input class="form-check-input" type="radio" name="adspend" id="exampleRadios2" value="£20 to £100/month">
+		  <label class="form-check-label" for="exampleRadios2">
+			£20 to £100
+		  </label>
+		</div>
+		<div class="form-check">
+		  <input class="form-check-input" type="radio" name="adspend" id="exampleRadios2" value="Greater than £100/month">
+		  <label class="form-check-label" for="exampleRadios2">
+			greater than £100
+		  </label>
+		</div>
+		</div>
+
+		<div class="col-md-2">		
+		<p class="text-primary">3.If No, do you consider the cost and effort involved to advertise is the main reason for not advertising?</p>
+		<div class="form-check">
+		  <input class="form-check-input" type="radio" name="costandeffort" id="exampleRadios1" value="Yes">
+		  <label class="form-check-label" for="exampleRadios1">
+			yes
+		  </label>
+		</div>
+		<div class="form-check">
+		  <input class="form-check-input" type="radio" name="costandeffort" id="exampleRadios2" value="No">
+		  <label class="form-check-label" for="exampleRadios2">
+			no
+		  </label>
+		</div>
+		</div>			
+		
+		
+		<div class="col-md-2">		
+		<p class="text-primary">4.Have you ever thought of promoting your business or services visually at different venues like coffee shops, pubs, restaurants, retail stores etc?</p>
 		<div class="form-check">
 		  <input class="form-check-input" type="radio" name="visualad" id="exampleRadios1" value="Yes">
 		  <label class="form-check-label" for="exampleRadios1">
-			Yes
+			yes
 		  </label>
 		</div>
 		<div class="form-check">
 		  <input class="form-check-input" type="radio" name="visualad" id="exampleRadios2" value="No">
 		  <label class="form-check-label" for="exampleRadios2">
-			No
+			no
 		  </label>
 		</div>
 		</div>
 		
 		<div class="col-md-2">		
-		<p class="text-primary">2.If yes, was it expensive or affordable?</p>
-		<div class="form-check">
-		  <input class="form-check-input" type="radio" name="affordability" id="exampleRadios1" value="expensive">
-		  <label class="form-check-label" for="exampleRadios1">
-			expensive
-		  </label>
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="radio" name="affordability" id="exampleRadios2" value="Affordable">
-		  <label class="form-check-label" for="exampleRadios2">
-			Affordable
-		  </label>
-		</div>
-		</div>
-		
-		<div class="col-md-2">		
-		<p class="text-primary">3.How much did it cost you?</p>
+		<p class="text-primary">5.How much it costed you per month?</p>
 		<div class="form-check">
 		  <input class="form-check-input" type="radio" name="cost" id="exampleRadios1" value="less than £100">
 		  <label class="form-check-label" for="exampleRadios1">
@@ -93,7 +132,7 @@
 		</div>
 		
 		<div class="col-md-2">		
-		<p class="text-primary">4.What is the overall time it took from design to publish of your ad?</p>
+		<p class="text-primary">6.How long it took to create and publish your ad?</p>
 		<div class="form-check">
 		  <input class="form-check-input" type="radio" name="time" id="exampleRadios1" value="less than 1 week">
 		  <label class="form-check-label" for="exampleRadios1">
@@ -114,42 +153,53 @@
 		</div>
 		</div>
 		
-		<div class="col-md-2">		
-		<p class="text-primary">5.If you have not done visual ad on a venue, what are the top 3 reasons?</p>
+		<div class="col-md-10">
+		<div><p></p></div>
+		</div>
+		
+		<div class="row justify-content-start">
+		<div class="col-md-6">		
+		<p class="text-primary">7.If you have not done visual ad on a venue or dont want to, what is the main reasons?</p>
 		<div class="form-group">
-		  <input name="reason1" type="text" class="form-control" placeholder="reason1">
+		  <input name="reason" type="text" class="form-control" placeholder="your comments..">
 		</div>
-		
-		<div class="form-group">
-		  <input name="reason2" type="text" class="form-control" placeholder="reason2">
-		</div>
-		
-		<div class="form-group">
-		  <input name="reason3" type="text" class="form-control" placeholder="reason3">
-		</div>
-
 		</div>
 		
 		
-		<div class="col-md-2">
-		<p class="text-primary">6.Basic Info</p>
+		
+		<div class="col-md-4">
+		<p class="text-primary">8.Basic Info</p>
+		
 		<div class="form-group">
 		  <input name="email" type="email" class="form-control" placeholder="Email" required>
 		</div>
 		
-		<div class="form-group">
-		  <input name="firstName" type="text" class="form-control" placeholder="First Name">
-		</div>
+		<!-- <div class="form-group"> -->
+		  <!-- <input name="businesstype" type="text" class="form-control" placeholder="Your Business Type"> -->
+		<!-- </div> -->
 		
 		<div class="form-group">
-		  <input name="lastName" type="text" class="form-control" placeholder="Last Name">
+		<label for="sel1">Select business type (select one):</label>
+		<select class="form-control" name="businesstype" id="sel1">
+        <option value="small business">Small business</option>
+        <option value="freelancer/individual professional">Freelancer/individual professional</option>
+        <option value="brand">Brand</option>
+		</select>
 		</div>
 		
-		<div class="text-center">
-		  <button type="submit" class="btn btn-default">Submit</button>
+		<div class="form-group">
+		
+		<div class="text-left col-md-20">
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</div>
 		</div>
 		
 		</div>
+		
+		
+		
+		
+		
    
 	</form>
 
